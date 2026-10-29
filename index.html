@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Quiz Marvel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== ABA 1: RECEPÇÃO (HUB MARVEL) ==================== -->
+  <div class="screen active" id="hub-screen">
+    <div class="hub-wrapper">
+      <header class="hub-header">
+        <div class="marvel-logo-badge">MARVEL</div>
+        <h1>PORTAL QUIZ MARVEL</h1>
+        <p>Escolha um quiz abaixo e teste seus conhecimentos sobre o MCU!</p>
+      </header>
+
+      <main class="quiz-grid">
+        <!-- Card 1: Quiz Ultimato -->
+        <div class="quiz-card">
+          <div class="quiz-card-badge">DISPONÍVEL</div>
+          <h2>Vingadores: Ultimato</h2>
+          <p>10 perguntas sobre a batalha final contra Thanos, viagens no tempo e o destino dos heróis.</p>
+          <button class="btn btn-card" id="open-ultimato-btn">JOGAR QUIZ</button>
+        </div>
+
+        <!-- Card 2: Quiz Guerra Infinita -->
+        <div class="quiz-card">
+          <div class="quiz-card-badge">DISPONÍVEL</div>
+          <h2>Vingadores: Guerra Infinita</h2>
+          <p>10 perguntas sobre a busca pelas Joias do Infinito, a batalha em Wakanda e a chegada de Thanos.</p>
+          <button class="btn btn-card" id="open-infinita-btn">JOGAR QUIZ</button>
+        </div>
+
+        <!-- Card Bloqueado 3 -->
+        <div class="quiz-card locked">
+          <div class="quiz-card-badge locked-badge">EM BREVE</div>
+          <h2>Homem-Aranha: Sem Volta para Casa</h2>
+          <p>Em breve... teste seus conhecimentos sobre o Multiverso!</p>
+          <button class="btn btn-card" disabled>BLOQUEADO</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ==================== ABA 2: TELA DO QUIZ (DINÂMICA) ==================== -->
+  <div class="screen" id="quiz-app-screen">
+    <div class="container">
+      <div class="header">
+        <span class="quiz-tag">QUIZ</span>
+        <h1>
+          <span class="title-vingadores" id="quiz-title-main">VINGADORES</span>
+          <span class="title-sub" id="quiz-title-sub">ULTIMATO</span>
+        </h1>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <!-- TELA INICIAL DO QUIZ -->
+      <div class="quiz-subscreen active" id="start-screen">
+        <div class="start-screen">
+          <p id="quiz-description">Prove que você entende do universo Marvel testando seus conhecimentos!</p>
+          <div class="rules">
+            <ul>
+              <li>O quiz contém <strong>10 questões</strong>.</li>
+              <li>Cada resposta correta vale <strong>10 pontos</strong>.</li>
+              <li>Pontuação máxima: <strong>100 pontos</strong>.</li>
+              <li>Ao final, você verá o total de acertos e erros.</li>
+            </ul>
+          </div>
+          <button class="btn" id="start-btn">Iniciar Quiz</button>
+        </div>
+      </div>
+
+      <!-- TELA DE QUESTÕES -->
+      <div class="quiz-subscreen" id="quiz-screen">
+        <div class="meta-info">
+          <span id="question-count">Questão 1 de 10</span>
+          <span id="score-count">Pontos: 0</span>
+        </div>
+
+        <div class="question-text" id="question-text">
+          Texto da pergunta aqui...
+        </div>
+
+        <div class="options-container" id="options-container">
+          <!-- Opções geradas via JS -->
+        </div>
+
+        <div class="footer-actions">
+          <button class="btn btn-next" id="next-btn">Próxima</button>
+        </div>
+      </div>
+
+      <!-- TELA DE RESULTADOS -->
+      <div class="quiz-subscreen" id="result-screen">
+        <div class="result-screen">
+          <h2>Resultado Final</h2>
+          
+          <div class="score-box">
+            <div class="final-score" id="final-score">0 pts</div>
+            <div class="feedback-msg" id="feedback-msg">Mensagem de avaliação...</div>
+
+            <div class="stats-grid">
+              <div class="stat-card corrects">
+                <div>Acertos</div>
+                <div class="stat-num" id="total-corrects">0</div>
+              </div>
+              <div class="stat-card wrongs">
+                <div>Erros</div>
+                <div class="stat-num" id="total-wrongs">0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-section" id="review-section">
+            <!-- Histórico de respostas gerado aqui -->
+          </div>
+
+          <div class="result-actions" style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+            <button class="btn" id="restart-btn">Refazer Quiz</button>
+            <button class="btn" id="home-btn">Início</button>
+            <a href="https://www.disneyplus.com/" target="_blank" id="watch-btn" class="btn btn-watch" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              🎬 Assistir ao Filme
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
