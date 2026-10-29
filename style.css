@@ -41,8 +41,8 @@ body {
 .screen.active {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 30px 20px;
 }
 
 /* ================= 1. TELA DE RECEPÇÃO (HUB MARVEL) ================= */
@@ -54,6 +54,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+#hub-screen.active {
+  align-items: center;
 }
 
 .hub-wrapper {
@@ -166,7 +170,7 @@ body {
     url('https://wallpapercave.com/wp/wp3891787.jpg');
 }
 
-/* Fundo do Quiz: Vingadores Guerra Infinita (Edição 5º Aniversário) */
+/* Fundo do Quiz: Vingadores Guerra Infinita */
 #quiz-app-screen.bg-infinita {
   background-image: 
     linear-gradient(rgba(6, 8, 20, 0.45), rgba(6, 8, 20, 0.65)), 
@@ -176,7 +180,6 @@ body {
 .container {
   width: 95%;
   max-width: 1000px;
-  min-height: 85vh;
   background: var(--card-bg);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -185,31 +188,12 @@ body {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow-y: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(123, 44, 191, 0.3);
 }
 
-/* Adaptação do Container para Guerra Infinita */
 #quiz-app-screen.bg-infinita .container {
   border-color: rgba(255, 75, 43, 0.4);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 75, 43, 0.25);
-}
-
-.container::-webkit-scrollbar {
-  width: 8px;
-}
-.container::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-.container::-webkit-scrollbar-thumb {
-  background: var(--galaxy-purple);
-  border-radius: 4px;
-}
-
-#quiz-app-screen.bg-infinita .container::-webkit-scrollbar-thumb {
-  background: var(--infinita-red);
 }
 
 .header {
@@ -408,22 +392,6 @@ body {
   box-shadow: 0 0 15px rgba(255, 183, 3, 0.6) !important;
 }
 
-.option-btn.correct, .option-btn:disabled.correct {
-  background-color: #16a34a !important;
-  border-color: #4ade80 !important;
-  color: #ffffff !important;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.6) !important;
-}
-
-.option-btn.wrong, .option-btn:disabled.wrong {
-  background-color: #dc2626 !important;
-  border-color: #f87171 !important;
-  color: #ffffff !important;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(220, 38, 38, 0.6) !important;
-}
-
 .result-screen {
   text-align: center;
 }
@@ -481,13 +449,11 @@ body {
 }
 
 .review-section {
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: left;
   background: rgba(0, 0, 0, 0.55);
   border-radius: 8px;
   padding: 20px;
-  max-height: 250px;
-  overflow-y: auto;
 }
 
 .review-section h3 {
@@ -533,7 +499,7 @@ body {
   box-shadow: 0 4px 20px rgba(157, 78, 221, 0.6);
 }
 
-/* Adaptação dos Botões para Guerra Infinita (Gradiente Laranja/Vermelho com Azul) */
+/* Adaptação dos Botões para Guerra Infinita */
 #quiz-app-screen.bg-infinita .btn {
   background: linear-gradient(135deg, #ff4b2b, #ff416c);
   border-color: var(--infinita-gold);

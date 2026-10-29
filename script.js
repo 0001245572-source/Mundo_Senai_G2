@@ -213,7 +213,6 @@ let currentQuestionIndex = 0;
 let score = 0;
 let userAnswers = [];
 let selectedOptionIndex = null;
-let isAnswerConfirmed = false;
 
 // ELEMENTOS DOM
 const hubScreen = document.getElementById('hub-screen');
@@ -238,7 +237,6 @@ const watchBtn = document.getElementById('watch-btn');
 const questionText = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
 const questionCount = document.getElementById('question-count');
-const scoreCount = document.getElementById('score-count');
 const progressBar = document.getElementById('progress');
 
 // EVENTOS DE ABERTURA
@@ -315,7 +313,6 @@ function showQuestion() {
   const q = questions[currentQuestionIndex];
   questionText.textContent = q.question;
   questionCount.textContent = `Questão ${currentQuestionIndex + 1} de ${questions.length}`;
-  scoreCount.textContent = `Pontos: ${score}`;
   
   const progressPercent = (currentQuestionIndex / questions.length) * 100;
   progressBar.style.width = `${progressPercent}%`;
@@ -331,14 +328,12 @@ function showQuestion() {
 
 function resetState() {
   selectedOptionIndex = null;
-  isAnswerConfirmed = false;
   nextBtn.textContent = currentQuestionIndex === questions.length - 1 ? "Ver Resultado" : "Próxima";
   nextBtn.classList.remove('show');
   optionsContainer.innerHTML = '';
 }
 
 function selectOption(index, button) {
-  if (isAnswerConfirmed) return;
   selectedOptionIndex = index;
   document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
   button.classList.add('selected');
@@ -346,23 +341,25 @@ function selectOption(index, button) {
 }
 
 function handleNextBtnClick() {
-  if (!isAnswerConfirmed) {
-    confirmAnswer();
+  if (selectedOptionIndex === null) return;
+  
+  saveUserAnswer();
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
   } else {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion();
-    } else {
-      showResults();
-    }
+    showResults();
   }
 }
 
-function confirmAnswer() {
-  if (selectedOptionIndex === null) return;
-  isAnswerConfirmed = true;
+function saveUserAnswer() {
   const q = questions[currentQuestionIndex];
   const isCorrect = selectedOptionIndex === q.answer;
+
+  if (isCorrect) {
+    score += 10;
+  }
 
   userAnswers.push({
     question: q.question,
@@ -370,20 +367,6 @@ function confirmAnswer() {
     correct: q.answer,
     isCorrect: isCorrect
   });
-
-  const allButtons = optionsContainer.querySelectorAll('.option-btn');
-  allButtons.forEach(btn => btn.disabled = true);
-
-  if (isCorrect) {
-    score += 10;
-    allButtons[selectedOptionIndex].classList.add('correct');
-  } else {
-    allButtons[selectedOptionIndex].classList.add('wrong');
-    allButtons[q.answer].classList.add('correct');
-  }
-
-  scoreCount.textContent = `Pontos: ${score}`;
-  nextBtn.textContent = currentQuestionIndex === questions.length - 1 ? "Ver Resultado" : "Próxima";
 }
 
 function showResults() {
