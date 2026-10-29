@@ -1,423 +1,435 @@
-// BANCO DE DADOS: ULTIMATO
-const questionsUltimato = [
+// ================= BANCOS DE DADOS DE PERGUNTAS =================
+
+const quizUltimato = [
   {
-    question: "Como os Vingadores conseguem viajar no tempo para recuperar as Joias do Infinito?",
-    options: ["Usando a Joia do Tempo guardada pelo Doutor Estranho", "Através do Reino Quântico com Partículas Pym", "Com uma tecnologia alienígena fornecida pela Capitã Marvel", "Utilizando a Bifrost do Thor"],
-    answer: 1
+    question: "Qual frase marcante o Homem de Ferro diz antes de estalar as dedos em Ultimato?",
+    options: ["Eu sou inevitável", "E eu sou... o Homem de Ferro", "Vingadores, avante!", "Nós somos os Vingadores"],
+    correct: 1
   },
   {
-    question: "Qual personagem se sacrifica em Vormir para obter a Joia da Alma?",
-    options: ["Gavião Arqueiro (Clint Barton)", "Nebulosa", "Viúva Negra (Natasha Romanoff)", "Gamora"],
-    answer: 2
+    question: "Quem se sacrifica em Vormir para obter a Joia da Alma em Vingadores: Ultimato?",
+    options: ["Gavião Arqueiro", "Nebulosa", "Viúva Negra", "Capitã Marvel"],
+    correct: 2
   },
   {
-    question: "Quem consegue erguer o Mjolnir (martelo do Thor) durante a batalha final?",
-    options: ["Homem de Ferro", "Capitão América", "Pantera Negra", "Hulk"],
-    answer: 1
-  },
-  {
-    question: "Qual é a famosa frase dita por Tony Stark antes de estalar os dedos?",
-    options: ["Avante, Vingadores!", "Eu sou inevitável.", "Eu sou o Homem de Ferro.", "Por Nova York!"],
-    answer: 2
+    question: "Qual herói consegue erguer o Mjolnir durante a batalha final contra Thanos?",
+    options: ["Thor", "Capitão América", "Hulk", "Pantera Negra"],
+    correct: 1
   },
   {
     question: "Quanto tempo se passa entre o estalo de Thanos e os eventos principais de Ultimato?",
-    options: ["2 anos", "3 anos", "5 anos", "10 anos"],
-    answer: 2
+    options: ["1 ano", "3 anos", "5 anos", "10 anos"],
+    correct: 2
   },
   {
-    question: "Qual Vingador empunha a Manopla produzida por Stark para trazer todos de volta?",
-    options: ["Thor", "Hulk", "Capitão América", "Homem de Ferro"],
-    answer: 1
+    question: "Como os Vingadores viajam no tempo para recuperar as Joias do Infinito?",
+    options: ["Usando o Reino Quântico", "Usando a Joia do Tempo", "Com a nave dos Guardiões", "Através de um portal do Doutor Estranho"],
+    correct: 0
   },
   {
-    question: "Para qual ano a equipe viaja para recuperar o Tesseract em Nova York?",
-    options: ["2012", "2014", "2018", "1970"],
-    answer: 0
+    question: "Qual versão do Hulk aparece em Vingadores: Ultimato?",
+    options: ["Hulk Selvagem", "Gladiador Hulk", "Professor Hulk / Smart Hulk", "Hulk Vermelho"],
+    correct: 2
   },
   {
-    question: "Quem assume o manto do Capitão América no final do filme?",
-    options: ["Bucky Barnes", "Sam Wilson (Falcão)", "Máquina de Combate", "Homem-Aranha"],
-    answer: 1
+    question: "Quem descobre a teoria de viagem no tempo utilizando a Fita de Möbius?",
+    options: ["Bruce Banner", "Tony Stark", "Hank Pym", "Rocket Raccoon"],
+    correct: 1
   },
   {
-    question: "Onde o Thanos do passado é derrotado na batalha final?",
-    options: ["Em Wakanda", "No planeta Titan", "No QG destruído dos Vingadores", "Em Asgard"],
-    answer: 2
+    question: "Qual é o nome da filha de Tony Stark e Pepper Potts?",
+    options: ["Cassie", "Morgan", "Lila", "Maya"],
+    correct: 1
   },
   {
-    question: "Qual é o destino final do Capitão América (Steve Rogers) ao devolver as joias?",
-    options: ["Ele morre na batalha final", "Ele decide ficar no passado para viver com Peggy Carter", "Ele se torna o novo rei de Asgard", "Ele se aposenta e vai morar no espaço"],
-    answer: 1
+    question: "Quem assume o manto de Capitão América no final do filme?",
+    options: ["Bucky Barnes", "Sam Wilson", "Rhodey", "Peter Parker"],
+    correct: 1
   },
   {
-    question: "Qual personagem resgata Tony Stark e Nebulosa à deriva no espaço?",
-    options: ["Capitã Marvel", "Thor", "Rocket Raccoon", "Valkyrie"],
-    answer: 0
+    question: "Qual personagem decapita Thanos no início do filme?",
+    options: ["Capitão América", "Homem de Ferro", "Thor", "Hulk"],
+    correct: 2
   },
   {
-    question: "O que acontece com Thanos no início do filme na sua fazenda?",
-    options: ["Ele é preso na balsa", "Ele é decapitado por Thor", "Ele foge para outra dimensão", "Ele se junta aos Vingadores"],
-    answer: 1
+    question: "Onde Thanos do passado trava a batalha final contra os Vingadores?",
+    options: ["Em Wakanda", "No Complexo dos Vingadores", "Em Nova York", "Em Titan"],
+    correct: 1
   },
   {
-    question: "Qual objeto o Homem de Ferro desenvolve para estabilizar a viagem no tempo?",
-    options: ["Um Reator Arc Quântico", "Um Mapeador de GPS Temporal em fita de Möbius", "Uma Manopla de Vibranium", "Um acelerador de partículas Pym"],
-    answer: 1
+    question: "Quem traz todos de volta ao estalar os dedos com a Manopla Stark?",
+    options: ["Tony Stark", "Thor", "Bruce Banner", "Capitã Marvel"],
+    correct: 2
   },
   {
-    question: "Quem convence Bruce Banner (Hulk) a ajudar na viagem no tempo?",
-    options: ["Tony Stark", "Steve Rogers e Natasha Romanoff", "Thor e Rocket", "Scott Lang"],
-    answer: 1
+    question: "Qual Vingador se torna o vigilante 'Ronin' durante o quinquênio?",
+    options: ["Capitão América", "Gavião Arqueiro", "Bucky Barnes", "Máquina de Combate"],
+    correct: 1
   },
   {
-    question: "Em qual local fica a Nova Asgard no filme?",
-    options: ["Tønsberg, Noruega", "Edimburgo, Escócia", "Londres, Inglaterra", "Nova York, EUA"],
-    answer: 0
+    question: "De qual ano os Vingadores pegam a Joia da Mente, do Espaço e do Tempo em Nova York?",
+    options: ["2012", "2014", "2018", "2008"],
+    correct: 0
   },
   {
-    question: "Qual Joia Rocket e Thor vão recuperar em Asgard no ano de 2013?",
-    options: ["Joia da Mente", "Joia da Realidade (Éter)", "Joia do Poder", "Joia do Tempo"],
-    answer: 1
+    question: "Quem intercepta as mensagens da Nebulosa do presente e descobre o plano dos Vingadores?",
+    options: ["Thanos do passado", "Ebony Maw", "Proxima Midnight", "Corvus Glaive"],
+    correct: 0
   },
   {
-    question: "Quem encontra Clint Barton (Gavião Arqueiro) operando como 'Ronin' no Japão?",
-    options: ["Steve Rogers", "Natasha Romanoff", "James Rhodes", "Scott Lang"],
-    answer: 1
+    question: "Qual é a célebre frase dita por Steve Rogers quando todos os heróis retornam dos portais?",
+    options: ["Vingadores... Reagrupem!", "Vingadores... Avante!", "Pela Terra!", "Por Tony!"],
+    correct: 1
   },
   {
-    question: "O que o Thanos do passado rouba através da Nebulosa do presente?",
-    options: ["Todas as joias de uma vez", "As Partículas Pym e a tecnologia de viagem temporal", "Apenas a Joia do Poder", "A Joia da Alma"],
-    answer: 1
+    question: "Qual joia Tony Stark e Steve Rogers vão buscar em 1970 após falharem em 2012?",
+    options: ["Joia do Espaço (Tesseract) e Partículas Pym", "Joia da Mente", "Joia da Realidade", "Joia do Poder"],
+    correct: 0
   },
   {
-    question: "Qual é a ordem célebre dada pelo Capitão América ao reunificar os heróis?",
-    options: ["Heróis, Atacar!", "Vingadores... Avante!", "Pela Terra!", "Destruam o Thanos!"],
-    answer: 1
+    question: "Quem é o guardião da Joia da Alma em Vormir?",
+    options: ["Thanos", "Caveira Vermelha", "Collector", "Eson, o Buscador"],
+    correct: 1
   },
   {
-    question: "O que Pepper Potts usa para lutar ao lado de Tony Stark na batalha final?",
-    options: ["A armadura Resgate (Rescue)", "As asas do Falcão", "O escudo do Capitão", "Armas energéticas de Wakanda"],
-    answer: 0
+    question: "O que Steve Rogers faz no final de Vingadores: Ultimato?",
+    options: ["Se aposenta e vai morar no espaço", "Devolve as Joias do Infinito e vive o passado com Peggy Carter", "Torna-se o novo diretor da S.H.I.E.L.D.", "Permanece como líder ativo dos Vingadores"],
+    correct: 1
+  },
+  {
+    question: "Qual música toca na cena final onde Steve e Peggy dançam?",
+    options: ["It's Been a Long, Long Time", "Mr. Blue Sky", "Come and Get Your Love", "Trouble Man"],
+    correct: 0
   }
 ];
 
-// BANCO DE DADOS: GUERRA INFINITA (20 PERGUNTAS)
-const questionsGuerraInfinita = [
+const quizGuerraInfinita = [
   {
-    question: "Qual é a primeira Joia do Infinito que Thanos obtém antes dos eventos mostrados no filme?",
-    options: ["Joia do Espaço", "Joia do Poder (Xandar)", "Joia da Mente", "Joia do Tempo"],
-    answer: 1
+    question: "Qual é a primeira Joia do Infinito que Thanos obtém antes do início do filme na tela?",
+    options: ["Joia do Espaço", "Joia do Poder", "Joia da Mente", "Joia da Realidade"],
+    correct: 1
   },
   {
-    question: "Onde estava guardada a Joia da Mente no início do filme?",
-    options: ["Com o Doutor Estranho", "Na testa do Visão", "Em Wakanda", "Com o Colecionador"],
-    answer: 1
+    question: "Onde Thanos consegue a Joia da Alma?",
+    options: ["Titan", "Knowhere", "Vormir", "Xandar"],
+    correct: 2
   },
   {
-    question: "Qual nova arma Thor viaja para forjar em Nidavellir ao lado de Rocket e Groot?",
-    options: ["Mjolnir 2.0", "Lança de Odin", "Rompe-Tormentas (Stormbreaker)", "Escudo de Asgard"],
-    answer: 2
+    question: "Qual personagem avisa o Doutor Estranho sobre a chegada iminente de Thanos à Terra?",
+    options: ["Thor", "Bruce Banner", "Tony Stark", "Wong"],
+    correct: 1
   },
   {
-    question: "Qual Sacrifício Thanos faz em Vormir para obter a Joia da Alma?",
-    options: ["Sacrifica sua armadura", "Mata Gamora, sua filha adotiva", "Sacrifica a Ordem Negra", "Abre mão de seu exército"],
-    answer: 1
+    question: "Qual é o nome da arma que Thor constrói em Nidavellir para combater Thanos?",
+    options: ["Mjolnir", "Rompe-Tormentas (Stormbreaker)", "Gungnir", "Jarnbjorn"],
+    correct: 1
   },
   {
-    question: "Onde ocorre a batalha terrestre final para proteger o Visão?",
-    options: ["Nova York", "Titan", "Wakanda", "Sokovia"],
-    answer: 2
+    question: "Quem ajuda Thor a forjar sua nova arma em Nidavellir?",
+    options: ["Eitri", "Odin", "Korg", "Grandmaster"],
+    correct: 0
   },
   {
-    question: "Qual herói entrega a Joia do Tempo a Thanos para salvar a vida de Tony Stark?",
-    options: ["Wong", "Doutor Estranho", "Homem-Aranha", "Senhor das Estrelas"],
-    answer: 1
+    question: "Em qual planeta os Vingadores e Guardiões enfrentam Thanos numa tentativa de tirar sua Manopla?",
+    options: ["Vormir", "Titan", "Xandar", "Ego"],
+    correct: 1
   },
   {
-    question: "Qual frase marcante o Homem-Aranha diz a Tony Stark antes de virar poeira?",
-    options: ["Eu lutei bem, Sr. Stark.", "Sr. Stark, não estou me sentindo muito bem...", "Cuide da minha tia May.", "Nós perdemos..."],
-    answer: 1
+    question: "Por que o plano na batalha de Titan falha no último segundo?",
+    options: ["Homem de Ferro recua", "Groot não ajuda", "Peter Quill se descontrola ao saber da morte de Gamora", "Doutor Estranho entrega a joia por engano"],
+    correct: 2
   },
   {
-    question: "O que acontece no final do filme logo após Thanos estalar os dedos?",
-    options: ["Metade de toda a vida no universo vira poeira", "O planeta Terra explode", "Os Vingadores viajam no tempo", "As Joias do Infinito são destruídas"],
-    answer: 0
+    question: "Qual Joia do Infinito estava sob a proteção do Visão?",
+    options: ["Joia da Mente", "Joia do Tempo", "Joia da Realidade", "Joia do Espaço"],
+    correct: 0
   },
   {
-    question: "Quem é o Rei dos Anões em Nidavellir que ajuda Thor a criar sua nova arma?",
-    options: ["Eitri (Peter Dinklage)", "Korg", "Miek", "Borr"],
-    answer: 0
+    question: "Onde ocorre a batalha final na Terra para proteger a Joia da Mente?",
+    options: ["Nova York", "Wakanda", "Sokovia", "Londres"],
+    correct: 1
   },
   {
-    question: "Qual joia Thanos pega do Doutor Estranho em Titan?",
-    options: ["Joia do Espaço", "Joia do Tempo", "Joia da Realidade", "Joia da Mente"],
-    answer: 1
+    question: "O que Doutor Estranho entrega a Thanos em troca da vida de Tony Stark?",
+    options: ["Joia da Mente", "Joia do Tempo", "Joia do Espaço", "Joia da Realidade"],
+    correct: 1
   },
   {
-    question: "Quem envia a mensagem para a Capitã Marvel na cena pós-créditos?",
-    options: ["Tony Stark", "Steve Rogers", "Nick Fury", "Maria Hill"],
-    answer: 2
+    question: "Quantos futuros possíveis o Doutor Estranho visualizou e em quantos eles venciam?",
+    options: ["14.000.605 futuros; venciam em 1", "10.000 futuros; venciam em 5", "1.000.000 futuros; venciam em 2", "140.000 futuros; venciam em 1"],
+    correct: 0
   },
   {
-    question: "Qual vilão guarda a Joia da Alma em Vormir?",
-    options: ["Caveira Vermelha (Red Skull)", "Ronan", "Loki", "Malekith"],
-    answer: 0
+    question: "Quem sacrificou a própria vida tentativa de matar Thanos no início do filme na nave asgardiana?",
+    options: ["Heimdall", "Loki", "Valkyrie", "Korg"],
+    correct: 1
   },
   {
-    question: "Em qual planeta a equipe de Stark, Parker, Estranho e Guardiões luta contra Thanos?",
-    options: ["Xandar", "Titan", "Knowhere", "Vormir"],
-    answer: 1
+    question: "Qual membro da Ordem Negra ataca o Doutor Estranho em Nova York para pegar o Olho de Agamotto?",
+    options: ["Corvus Glaive", "Ebony Maw", "Proxima Midnight", "Cull Obsidian"],
+    correct: 1
   },
   {
-    question: "O que Thanos faz com a Joia da Realidade ao ser confrontado pelos Guardiões em Knowhere?",
-    options: ["Transforma os tiros do Senhor das Estrelas em bolhas de sabão", "Destrói a nave dos Guardiões", "Teleporta todos para Wakanda", "Cria um buraco negro"],
-    answer: 0
+    question: "Qual frase Thanos diz a Thor logo após o Deus do Trovão crivar o machado no seu peito?",
+    options: ["Eu sou inevitável", "Você deveria ter mirado na cabeça", "Sua inteligência é sua maldição", "Tudo perfeitamente equilibrado"],
+    correct: 1
   },
   {
-    question: "Quem tenta remover a Joia da Mente da cabeça do Visão com cirurgia avançada?",
-    options: ["Shuri", "Bruce Banner", "Helen Cho", "Rocket"],
-    answer: 0
+    question: "Quem é transformado em tiras/cubos por Thanos em Knowhere usando a Joia da Realidade?",
+    options: ["Drax e Mantis", "Star-Lord e Gamora", "Thor e Rocket", "Groot e Rocket"],
+    correct: 0
   },
   {
-    question: "O que impede a equipe em Titan de retirar a Manopla do Infinito de Thanos enquanto ele está desacordado?",
-    options: ["O ataque de Nebulosa", "A reação descontrolada do Senhor das Estrelas ao saber da morte de Gamora", "O despertar da Joia do Poder", "Um ataque surpresa da Ordem Negra"],
-    answer: 1
+    question: "Quem Nick Fury chama através do bip na cena pós-créditos antes de virar poeira?",
+    options: ["Capitão América", "Homem de Ferro", "Capitã Marvel", "Doutor Estranho"],
+    correct: 2
   },
   {
-    question: "Qual Vingador é enviado à Terra por Heimdall através da Bifrost logo no início do filme?",
-    options: ["Thor", "Hulk (Bruce Banner)", "Loki", "Gavião Arqueiro"],
-    answer: 1
+    question: "Qual Guardião da Galáxia serve de cabo para o machado Rompe-Tormentas?",
+    options: ["Rocket", "Groot", "Drax", "Star-Lord"],
+    correct: 1
   },
   {
-    question: "Qual frase Thanos diz a Thor após ser atingido pelo Rompe-Tormentas?",
-    options: ["Você é fraco.", "Deveria ter acertado a cabeça.", "Isso não é o fim.", "Tarde demais."],
-    answer: 1
+    question: "Onde Thanos está no final do filme enquanto contempla o nascer do sol após o estalo?",
+    options: ["Titan", "Terra", "Planeta Agrícola (The Garden)", "Knowhere"],
+    correct: 2
   },
   {
-    question: "Quem morre nas mãos de Thanos logo no início do filme ao tentar enganá-lo?",
-    options: ["Heimdall e Loki", "Doutor Estranho", "Wong", "Groot"],
-    answer: 0
+    question: "Qual era o objetivo principal de Thanos ao reunir as seis Joias do Infinito?",
+    options: ["Dominar o universo", "Eliminar metade de toda a vida para trazer equilíbrio aos recursos", "Destruir a Terra e os Vingadores", "Tornar-se imortal"],
+    correct: 1
   },
   {
-    question: "Quantos futuros possíveis o Doutor Estranho visualiza e em quantos eles vencem?",
-    options: ["1000 futuros e vencem em 100", "14.000.605 futuros e vencem em apenas 1", "500.000 futuros e vencem em 12", "1.000.000 de futuros e vencem em 5"],
-    answer: 1
+    question: "Quem destruiu a Joia da Mente inicialmente antes de Thanos voltar no tempo com a Joia do Tempo?",
+    options: ["Feiticeira Escarlate (Wanda)", "Capitão América", "Thor", "Bruce Banner"],
+    correct: 0
   }
 ];
 
-// ESTADO DO QUIZ ATUAL
-let currentQuizType = "ultimato"; 
-let questions = [];
+// ================= ESTADO DO JOGO =================
+
+let currentQuestions = [];
 let currentQuestionIndex = 0;
-let score = 0;
+let score = {
+  corrects: 0,
+  wrongs: 0
+};
 let userAnswers = [];
-let selectedOptionIndex = null;
-let isAnswerConfirmed = false;
 
-// ELEMENTOS DOM
-const hubScreen = document.getElementById('hub-screen');
-const quizAppScreen = document.getElementById('quiz-app-screen');
+// ================= GERENCIAMENTO DE TELAS =================
 
-const startScreen = document.getElementById('start-screen');
-const quizScreen = document.getElementById('quiz-screen');
-const resultScreen = document.getElementById('result-screen');
+function showScreen(screenId) {
+  document.querySelectorAll('.screen').forEach(screen => {
+    screen.classList.remove('active');
+  });
+  const target = document.getElementById(screenId);
+  if (target) {
+    target.classList.add('active');
+  }
+}
 
-const openUltimatoBtn = document.getElementById('open-ultimato-btn');
-const openInfinitaBtn = document.getElementById('open-infinita-btn');
+function showQuizSubscreen(subscreenId) {
+  document.querySelectorAll('.quiz-subscreen').forEach(subscreen => {
+    subscreen.classList.remove('active');
+  });
+  const target = document.getElementById(subscreenId);
+  if (target) {
+    target.classList.add('active');
+  }
+}
 
-const startBtn = document.getElementById('start-btn');
-const nextBtn = document.getElementById('next-btn');
-const restartBtn = document.getElementById('restart-btn');
-const homeBtn = document.getElementById('home-btn');
+// ================= INICIALIZAÇÃO DOS QUIZZES =================
 
-const quizTitleSub = document.getElementById('quiz-title-sub');
-const quizDescription = document.getElementById('quiz-description');
-const watchBtn = document.getElementById('watch-btn');
+function startQuiz(theme) {
+  const appScreen = document.getElementById('quiz-app-screen');
+  const titleVingadores = document.getElementById('quiz-title-vingadores');
+  const titleSub = document.getElementById('quiz-title-sub');
+  const tag = document.getElementById('quiz-tag');
 
-const questionText = document.getElementById('question-text');
-const optionsContainer = document.getElementById('options-container');
-const questionCount = document.getElementById('question-count');
-const scoreCount = document.getElementById('score-count');
-const progressBar = document.getElementById('progress');
-
-// EVENTOS DE ABERTURA
-openUltimatoBtn.addEventListener('click', () => setupQuiz("ultimato"));
-openInfinitaBtn.addEventListener('click', () => setupQuiz("infinita"));
-
-homeBtn.addEventListener('click', () => {
-  quizAppScreen.classList.remove('active');
-  hubScreen.classList.add('active');
-  progressBar.style.width = '0%';
-});
-
-startBtn.addEventListener('click', startQuiz);
-nextBtn.addEventListener('click', handleNextBtnClick);
-restartBtn.addEventListener('click', startQuiz);
-
-function setupQuiz(type) {
-  currentQuizType = type;
-  quizAppScreen.classList.remove('bg-ultimato', 'bg-infinita');
-
-  if (type === "ultimato") {
-    quizAppScreen.classList.add('bg-ultimato');
-    quizTitleSub.textContent = "ULTIMATO";
-    quizDescription.textContent = "Prove que você entende do universo Marvel testando seus conhecimentos sobre Vingadores: Ultimato!";
-    watchBtn.href = "https://www.disneyplus.com/movies/avengers-endgame/aRb1A3xD2v34";
-  } else {
-    quizAppScreen.classList.add('bg-infinita');
-    quizTitleSub.textContent = "GUERRA INFINITA";
-    quizDescription.textContent = "Teste seus conhecimentos sobre a busca pelas Joias do Infinito e a batalha épica contra Thanos!";
-    watchBtn.href = "https://www.disneyplus.com/movies/marvel-studios-avengers-infinity-war/123wA3xD2v34";
+  // Configurações do Quiz de Ultimato
+  if (theme === 'ultimato') {
+    appScreen.className = 'screen active bg-ultimato';
+    tag.innerText = 'QUIZ MARVEL';
+    titleVingadores.innerText = 'VINGADORES';
+    titleSub.innerText = 'ULTIMATO';
+    currentQuestions = [...quizUltimato].sort(() => Math.random() - 0.5).slice(0, 10);
+  } 
+  // Configurações do Quiz de Guerra Infinita
+  else if (theme === 'infinita') {
+    appScreen.className = 'screen active bg-infinita';
+    tag.innerText = 'QUIZ MARVEL';
+    titleVingadores.innerText = 'VINGADORES';
+    titleSub.innerText = 'GUERRA INFINITA';
+    currentQuestions = [...quizGuerraInfinita].sort(() => Math.random() - 0.5).slice(0, 10);
   }
 
-  hubScreen.classList.remove('active');
-  quizAppScreen.classList.add('active');
-  switchSubscreen(startScreen);
-}
-
-function switchSubscreen(target) {
-  [startScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('active'));
-  target.classList.add('active');
-}
-
-// EMBARALHAR PERGUNTAS E OPÇÕES DE RESPOSTA
-function getRandomQuestions() {
-  const baseQuestions = currentQuizType === "ultimato" ? questionsUltimato : questionsGuerraInfinita;
-  const shuffledQuestions = [...baseQuestions].sort(() => 0.5 - Math.random()).slice(0, 10);
-
-  return shuffledQuestions.map((q, index) => {
-    const optionsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.answer }));
-    optionsWithIndex.sort(() => 0.5 - Math.random());
-
-    const newOptions = optionsWithIndex.map(o => o.text);
-    const newCorrectAnswer = optionsWithIndex.findIndex(o => o.isCorrect);
-
-    return {
-      question: `${index + 1}. ${q.question}`,
-      options: newOptions,
-      answer: newCorrectAnswer
-    };
-  });
-}
-
-function startQuiz() {
-  questions = getRandomQuestions();
+  // Reinicia o estado
   currentQuestionIndex = 0;
-  score = 0;
+  score = { corrects: 0, wrongs: 0 };
   userAnswers = [];
-  switchSubscreen(quizScreen);
-  showQuestion();
+
+  showScreen('quiz-app-screen');
+  showQuizSubscreen('start-subscreen');
 }
 
-function showQuestion() {
-  resetState();
-  const q = questions[currentQuestionIndex];
-  questionText.textContent = q.question;
-  questionCount.textContent = `Questão ${currentQuestionIndex + 1} de ${questions.length}`;
-  scoreCount.textContent = `Pontos: ${score}`;
+function returnToHub() {
+  showScreen('hub-screen');
+}
+
+function beginQuestions() {
+  showQuizSubscreen('question-subscreen');
+  loadQuestion();
+}
+
+// ================= LÓGICA DAS PERGUNTAS E RESPOSTAS =================
+
+function loadQuestion() {
+  const currentQuestion = currentQuestions[currentQuestionIndex];
+
+  // Esconde o botão Próxima
+  const nextBtn = document.getElementById('next-btn');
+  if (nextBtn) {
+    nextBtn.classList.remove('show');
+  }
+
+  // Atualiza metadados
+  const qNum = document.getElementById('question-number');
+  if (qNum) {
+    qNum.innerText = `Pergunta ${currentQuestionIndex + 1} de ${currentQuestions.length}`;
+  }
   
-  const progressPercent = (currentQuestionIndex / questions.length) * 100;
-  progressBar.style.width = `${progressPercent}%`;
+  // Atualiza Barra de Progresso
+  const progressPercent = (currentQuestionIndex / currentQuestions.length) * 100;
+  const pBar = document.getElementById('progress-bar-fill');
+  if (pBar) {
+    pBar.style.width = `${progressPercent}%`;
+  }
 
-  q.options.forEach((optionText, index) => {
-    const button = document.createElement('button');
-    button.textContent = optionText;
-    button.classList.add('option-btn');
-    button.addEventListener('click', () => selectOption(index, button));
-    optionsContainer.appendChild(button);
-  });
+  // Renderiza texto da pergunta
+  const qText = document.getElementById('question-text');
+  if (qText) {
+    qText.innerText = currentQuestion.question;
+  }
+
+  // Monta as opções
+  const optionsContainer = document.getElementById('options-container');
+  if (optionsContainer) {
+    optionsContainer.innerHTML = '';
+
+    currentQuestion.options.forEach((optionText, index) => {
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.innerText = optionText;
+      btn.onclick = () => selectOption(index);
+      optionsContainer.appendChild(btn);
+    });
+  }
 }
 
-function resetState() {
-  selectedOptionIndex = null;
-  isAnswerConfirmed = false;
-  nextBtn.textContent = currentQuestionIndex === questions.length - 1 ? "Ver Resultado" : "Próxima";
-  nextBtn.classList.remove('show');
-  optionsContainer.innerHTML = '';
-}
+function selectOption(selectedIndex) {
+  const currentQuestion = currentQuestions[currentQuestionIndex];
+  const optionButtons = document.querySelectorAll('.option-btn');
 
-function selectOption(index, button) {
-  if (isAnswerConfirmed) return;
-  selectedOptionIndex = index;
-  document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
-  button.classList.add('selected');
-  nextBtn.classList.add('show');
-}
+  // Desativa todos os botões para evitar respostas múltiplas
+  optionButtons.forEach(btn => btn.disabled = true);
 
-function handleNextBtnClick() {
-  if (!isAnswerConfirmed) {
-    confirmAnswer();
-  } else {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion();
-    } else {
-      showResults();
+  // Destaca a opção correta em verde em TODOS os quizzes
+  if (optionButtons[currentQuestion.correct]) {
+    optionButtons[currentQuestion.correct].classList.add('correct');
+  }
+
+  // Se o utilizador errou, destaca a opção clicada em vermelho
+  if (selectedIndex !== currentQuestion.correct) {
+    if (optionButtons[selectedIndex]) {
+      optionButtons[selectedIndex].classList.add('wrong');
     }
-  }
-}
-
-function confirmAnswer() {
-  if (selectedOptionIndex === null) return;
-  isAnswerConfirmed = true;
-  const q = questions[currentQuestionIndex];
-  const isCorrect = selectedOptionIndex === q.answer;
-
-  userAnswers.push({
-    question: q.question,
-    selected: selectedOptionIndex,
-    correct: q.answer,
-    isCorrect: isCorrect
-  });
-
-  const allButtons = optionsContainer.querySelectorAll('.option-btn');
-  allButtons.forEach(btn => btn.disabled = true);
-
-  if (isCorrect) {
-    score += 10;
-    allButtons[selectedOptionIndex].classList.add('correct');
+    userAnswers.push({
+      question: currentQuestion.question,
+      userAnswer: currentQuestion.options[selectedIndex],
+      correctAnswer: currentQuestion.options[currentQuestion.correct],
+      isCorrect: false
+    });
+    score.wrongs++;
   } else {
-    allButtons[selectedOptionIndex].classList.add('wrong');
-    allButtons[q.answer].classList.add('correct');
+    // Se o utilizador acertou
+    userAnswers.push({
+      question: currentQuestion.question,
+      userAnswer: currentQuestion.options[selectedIndex],
+      correctAnswer: currentQuestion.options[currentQuestion.correct],
+      isCorrect: true
+    });
+    score.corrects++;
   }
 
-  scoreCount.textContent = `Pontos: ${score}`;
-  nextBtn.textContent = currentQuestionIndex === questions.length - 1 ? "Ver Resultado" : "Próxima";
+  // Exibe o botão para avançar para a próxima questão
+  const nextBtn = document.getElementById('next-btn');
+  if (nextBtn) {
+    nextBtn.classList.add('show');
+  }
 }
+
+function nextQuestion() {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < currentQuestions.length) {
+    loadQuestion();
+  } else {
+    showResults();
+  }
+}
+
+// ================= TELA DE RESULTADOS E REVISÃO =================
 
 function showResults() {
-  switchSubscreen(resultScreen);
-  progressBar.style.width = '100%';
+  const pBar = document.getElementById('progress-bar-fill');
+  if (pBar) {
+    pBar.style.width = '100%';
+  }
 
-  const correctsCount = userAnswers.filter(a => a.isCorrect).length;
-  const wrongsCount = questions.length - correctsCount;
+  showQuizSubscreen('result-subscreen');
 
-  document.getElementById('final-score').textContent = `${score} / 100 pts`;
-  document.getElementById('total-corrects').textContent = correctsCount;
-  document.getElementById('total-wrongs').textContent = wrongsCount;
+  const total = currentQuestions.length;
+  const percentage = Math.round((score.corrects / total) * 100);
 
-  const feedbackMsg = document.getElementById('feedback-msg');
-  if (score === 100) feedbackMsg.textContent = "Incrível! Você é digno das Joias do Infinito!";
-  else if (score >= 70) feedbackMsg.textContent = "Muito bem! Você salvou o universo!";
-  else if (score >= 40) feedbackMsg.textContent = "Bom trabalho, mas Thanos ainda conseguiu estalar os dedos...";
-  else feedbackMsg.textContent = "Thanos venceu dessa vez... Hora de assistir aos filmes de novo!";
+  const finalScore = document.getElementById('final-score-text');
+  if (finalScore) finalScore.innerText = `${percentage}%`;
 
-  const reviewSection = document.getElementById('review-section');
-  reviewSection.innerHTML = '<h3>Resumo das Respostas:</h3>';
+  const cCount = document.getElementById('correct-count');
+  if (cCount) cCount.innerText = score.corrects;
 
-  userAnswers.forEach((ans, index) => {
-    const item = document.createElement('div');
-    item.classList.add('review-item');
-    item.classList.add(ans.isCorrect ? 'correct' : 'wrong');
+  const wCount = document.getElementById('wrong-count');
+  if (wCount) wCount.innerText = score.wrongs;
 
-    const userText = questions[index].options[ans.selected];
-    const correctText = questions[index].options[ans.correct];
+  // Mensagem de Feedback
+  const feedbackMsg = document.getElementById('feedback-message');
+  if (feedbackMsg) {
+    if (percentage === 100) {
+      feedbackMsg.innerText = "Perfeito! Você é digno de empunhar o Mjolnir e salvar o universo!";
+    } else if (percentage >= 70) {
+      feedbackMsg.innerText = "Excelente trabalho! Os Vingadores se orgulhariam do seu conhecimento.";
+    } else if (percentage >= 50) {
+      feedbackMsg.innerText = "Bom esforço! Mas ainda há mistérios do multiverso para você dominar.";
+    } else {
+      feedbackMsg.innerText = "Thanos venceu desta vez... Que tal maratonar os filmes e tentar novamente?";
+    }
+  }
 
-    item.innerHTML = ans.isCorrect 
-      ? `<strong>Q${index + 1}:</strong> Você acertou! (<em>${userText}</em>)`
-      : `<strong>Q${index + 1}:</strong> Você errou! <br>Sua resposta: <em>${userText}</em><br>Correta: <strong>${correctText}</strong>`;
+  // Renderiza a lista de revisão
+  const reviewList = document.getElementById('review-list');
+  if (reviewList) {
+    reviewList.innerHTML = '';
 
-    reviewSection.appendChild(item);
-  });
+    userAnswers.forEach((item, idx) => {
+      const div = document.createElement('div');
+      div.className = `review-item ${item.isCorrect ? 'correct' : 'wrong'}`;
+      
+      if (item.isCorrect) {
+        div.innerHTML = `<strong>${idx + 1}. ${item.question}</strong><br>Sua resposta: <span style="color:#4ade80;">${item.userAnswer}</span> (Correta)`;
+      } else {
+        div.innerHTML = `<strong>${idx + 1}. ${item.question}</strong><br>Sua resposta: <span style="color:#f87171;">${item.userAnswer}</span><br>Resposta correta: <span style="color:#4ade80;">${item.correctAnswer}</span>`;
+      }
+
+      reviewList.appendChild(div);
+    });
+  }
 }
